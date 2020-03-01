@@ -3,8 +3,8 @@ import glob
 import csv
 import platform
 
-os = platform.system()
-if os == 'Windows':
+os_type = platform.system()
+if os_type == 'Windows':
 	slash = '\\'
 else:
 	slash = '/'

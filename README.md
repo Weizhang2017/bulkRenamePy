@@ -10,7 +10,7 @@
 
 #### Clone the repository
 
-1.  Open the Windows Command Prompt by type cmd in the search bar. 
+1.  Open the Windows Command Prompt by typing cmd in the search bar. 
 	![cmd image](https://www.isunshare.com/images/article/windows-10/4-ways-to-open-command-prompt-in-windows-10/open-command-prompt-in-start-menu.png)
 
 2.  Run the following commands:

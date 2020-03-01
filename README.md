@@ -33,6 +33,10 @@ git clone https://github.com/Weizhang2017/bulkRenamePy.git
 	```
 	cd bulkRenamePy
 	```
+2. Install the package
+	```
+	py setup.py install
+	```
 
 2. Check command usage
 	```

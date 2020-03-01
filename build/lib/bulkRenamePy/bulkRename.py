@@ -1,6 +1,13 @@
 import os
 import glob
 import csv
+import platform
+
+os = platform.system()
+if os == 'Windows':
+	slash = '\\'
+else:
+	slash = '/'
 
 class BulkRename:
 
@@ -25,18 +32,18 @@ class BulkRename:
 
 	@folder_path.setter
 	def folder_path(self, folder_path):
-		if folder_path[-1] == '/':
+		if folder_path[-1] == slash:
 			folder_path += '*'
-		elif folder_path[-1] != '/' and folder_path[-1] != '*':
-			folder_path += '/*'
+		elif folder_path[-1] != slash and folder_path[-1] != '*':
+			folder_path += slash + '*'
 		self._folder_path = folder_path
 	
 
 	def rename(self):
 		for file in self.files:
-			path = '/'.join(file.split('/')[:-1]) + '/'
+			path = slash.join(file.split(slash)[:-1]) + slash
 			# import pdb;pdb.set_trace()
-			filename = file.split('/')[-1]
+			filename = file.split(slash)[-1]
 			# import pdb;pdb.set_trace()
 			if filename in self.name_dict.keys():
 				os.rename(file, path + self.name_dict[filename])
@@ -45,5 +52,5 @@ class BulkRename:
 				print(f'filename not changed for {filename}, no new filename found in {self.name_file}')
 
 if __name__ == '__main__':
-	file_renamer = BulkRename('../test/', '../test/name_file.csv')
+	file_renamer = BulkRename(slash+'test'+slash, slash+'test' + slash + 'name_file.csv')
 	file_renamer.rename()

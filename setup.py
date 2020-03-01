@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="bulkRenamePy",
-    version="0.1.1",
+    version="0.1.2",
     author="Wei Zhang",
     author_email="zhangw1.2011@gmail.com",
     description="Rename files in bulk",

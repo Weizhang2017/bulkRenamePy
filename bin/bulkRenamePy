@@ -1,0 +1,32 @@
+#!/usr/bin/env python
+import argparse
+import sys
+
+from bulkRename import BulkRename
+
+client_parser = argparse.ArgumentParser(prog='bulkRenamePy', description='rename files in bulk', allow_abbrev=False)
+
+client_parser.add_argument(
+						'--folderpath',
+						metavar='folderpath',
+						type=str,
+						help='folder-path for names of the files to be renamed',
+						required=True
+	)
+
+client_parser.add_argument(
+						'--namefile',
+						metavar='namefile',
+						type=str,
+						help='a file mapping original filenames to new filenames',
+						required=True
+	)
+
+# Execute the parse_args() method
+args = client_parser.parse_args()
+bulk_rename = BulkRename(
+			folder_path=args.folderpath,
+			name_file=args.namefile
+			)
+
+bulk_rename.rename()

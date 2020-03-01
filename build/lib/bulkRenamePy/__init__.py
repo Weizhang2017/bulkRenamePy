@@ -1,1 +1,1 @@
-from bulkRename import BulkRename
+from .bulkRename import BulkRename

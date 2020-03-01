@@ -34,7 +34,7 @@ class BulkRename:
 
 	def rename(self):
 		for file in self.files:
-			path = ''.join(file.split('/')[:-1]) + '/'
+			path = '/'.join(file.split('/')[:-1]) + '/'
 			# import pdb;pdb.set_trace()
 			filename = file.split('/')[-1]
 			# import pdb;pdb.set_trace()
@@ -45,5 +45,5 @@ class BulkRename:
 				print(f'filename not changed for {filename}, no new filename found in {self.name_file}')
 
 if __name__ == '__main__':
-	file_renamer = BulkRename('test/*', 'test/name_file.csv')
-	file.rename()
+	file_renamer = BulkRename('../test/', '../test/name_file.csv')
+	file_renamer.rename()

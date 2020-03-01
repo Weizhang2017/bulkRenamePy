@@ -38,7 +38,7 @@ git clone https://github.com/Weizhang2017/bulkRenamePy.git
 	py setup.py install
 	```
 
-2. Check command usage
+3. Check command usage
 	```
 	py bin/bulkRenamePy --help
 	```	
@@ -54,7 +54,7 @@ git clone https://github.com/Weizhang2017/bulkRenamePy.git
 	  --namefile namefile   a file mapping original filenames to new filenames
 	```
 
-3. Check the test folder
+4. Check the test folder
 
 	```
 	start test
@@ -64,7 +64,7 @@ git clone https://github.com/Weizhang2017/bulkRenamePy.git
 	> The first column in the __name-file__ indicates the __original file names__ and the second column indicates the __file names to be renamed to__.
 
 
-3. Rename the file in the test folder
+5. Rename the file in the test folder
 
 	```
 	py bin/bulkRenamePy --folderpath test\\ --namefile test\\name_file.csv

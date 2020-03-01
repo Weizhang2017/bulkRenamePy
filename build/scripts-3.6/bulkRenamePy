@@ -2,7 +2,7 @@
 import argparse
 import sys
 
-from bulkRename import BulkRename
+from bulkRenamePy import BulkRename
 
 client_parser = argparse.ArgumentParser(prog='bulkRenamePy', description='rename files in bulk', allow_abbrev=False)
 
